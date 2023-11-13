@@ -1,0 +1,14 @@
+import pyqrcode
+from IPython.display import Image, display
+
+# Data to be encoded in the QR code
+data = "Hello, this is a QR code generated using Python!"
+
+# Create the QR Code
+qr = pyqrcode.create(data)
+
+# Save the QR Code as a PNG file
+qr.png('mnt/data/qr_code_example.png', scale=6)
+
+# Display the QR Code in the notebook
+display(Image('mnt/data/qr_code_example.png'))
